@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<!-- MySQL Hibernate configuration example for Cab Booking System -->
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/cabbookingdb</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="connection.username">vaishnavi</property>
+        <property name="connection.password">vaishu</property>
+        <property name="connection.pool_size">3</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+
+        <!-- Add mappings for your Cab Booking entities here -->
+        <mapping resource="user.hbm.xml"/>
+        <mapping resource="driver.hbm.xml"/>
+        <mapping resource="ride.hbm.xml"/>
+        <mapping resource="payment.hbm.xml"/>
+        <mapping resource="rating.hbm.xml"/>
+        <mapping resource="cab.hbm.xml"/>
+        <mapping resource="location.hbm.xml"/>
+        <mapping resource="riderequest.hbm.xml"/>
+        <mapping resource="notification.hbm.xml"/>
+        <mapping resource="bookinghistory.hbm.xml"/>
+        <mapping resource="transaction.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
